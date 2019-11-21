@@ -1,0 +1,5 @@
+apt install nginx
+
+
+配置文件
+/etc/nginx/sites-available/default
