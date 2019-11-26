@@ -1,0 +1,2 @@
+#!/bin/bash
+firewall-cmd --set-default-zone=      block/dmz/drop/external/home/internal/public/trusted/work  

@@ -1,0 +1,3 @@
+#!/bin/bash
+apt install vsftpd  安装ftp                          默认FTP文件存放路径:/var/ftp
+systemctl enable vsftpd 启动ftp

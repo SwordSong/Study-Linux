@@ -1,0 +1,1 @@
+find /路径 -type f -name "*.txt"

@@ -1,0 +1,39 @@
+#!/bin/bash
+2019-11-21配置
+我们要使用PPTP协议搭建×××，首先验证服务器是否支持MPPE模块
+
+sudo modprobe ppp-compress-18 && echo MPPE is ok
+
+如果输出：MPPE is ok，则说明服务器的linux内核支持MPPE模块，否则请升级linux内核到2.6.15以上版本。
+
+安装PPTP
+sudo apt-get update
+sudo apt-get install pptpd
+
+配置PPTP
+
+配置网关和IP分配段
+sudo vim /etc/pptpd.conf
+option /etc/ppp/options #原为option /etc/ppp/pptpd-options 有问题无法读取配置文件
+localip 192.168.10.1	#是×××服务器的地址
+remoteip 192.168.10.1-200	#表示×××能分配给客户机的地址。
+
+修改DNS
+sudo vim /etc/ppp/pptpd-options
+ms-dns 8.8.8.8
+ms-dns 8.8.4.4
+
+设置用户名密码
+sudo vim /etc/ppp/chap-secrets
+username * password * 
+
+重启服务
+sudo /etc/init.d/pptpd restart
+
+部署IP转发
+sudo vim /etc/sysctl.conf
+net.ipv4.ip_forward=1
+sudo sysctl -p
+
+使用iptables建立NAT
+iptables -t nat -A POSTROUTING -s 192.168.10.1/24 -o eth0 -j SNAT --to-source 外网ip
