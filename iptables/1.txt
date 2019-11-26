@@ -1,6 +1,0 @@
-debug
-option /etc/ppp/options
-localip 10.8.8.24
-remoteip 10.10.88.1-99
-name pptpd
-                      option /etc/ppp/pptpd-options
