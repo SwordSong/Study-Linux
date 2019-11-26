@@ -1,4 +1,3 @@
-#!/bin/bash
 1. 用awk 打印整个test.txt （以下操作都是用awk工具实现，针对test.txt）；
 awk '{print $0}' test.txt
 
