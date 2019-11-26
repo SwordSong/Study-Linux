@@ -1,4 +1,3 @@
-#!/bin/bash
 iptables -L  查看规则  -t -n -v
 
 启动modprobe ip_tables

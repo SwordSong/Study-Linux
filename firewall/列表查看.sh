@@ -1,4 +1,3 @@
-#!/bin/bash
 firewall-cmd --list-all
 firewall-cmd --list-all-zones 
 firewall-cmd --get-zones

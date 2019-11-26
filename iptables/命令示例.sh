@@ -1,4 +1,3 @@
-#!/bin/bash
 对某个端口封禁
 iptables -t filter -A INPUT -p tcp --dport 22 -j DROP
 -t 指定表   -A 添加规则  INPUT 输入  -p选择协议 --dport指定端口 -j指定操作

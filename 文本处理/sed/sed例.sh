@@ -1,4 +1,3 @@
-#!/bin/bash
 1. 把/etc/passwd 复制到/root/test.txt，用sed打印所有行；
 	root@jian:/home/sh# cp /etc/passwd /root/test.txt | sed -n '1,$p' /root/test.txt
 

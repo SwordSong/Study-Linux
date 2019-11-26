@@ -1,4 +1,3 @@
-#!/bin/bash
 
 server {
 	listen 80;

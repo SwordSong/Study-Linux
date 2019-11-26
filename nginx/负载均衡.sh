@@ -1,4 +1,3 @@
-#!/bin/bash
 
 upstream group1{
 	server 45.76.110.198 weight=1;
