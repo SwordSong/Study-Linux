@@ -41,8 +41,8 @@ conn L2TP-IPSEC
 # which knows the public part.
 
 : PSK "TypeYourPassPhraseHere"
-10.8.8.24 %any:PSK "admin"
-		↑密码
+xxx.xxx.xxx.xxx %any:PSK "admin"
+	                       	↑密码
  
 
 编辑/etc/ppp/options.xl2tpd 

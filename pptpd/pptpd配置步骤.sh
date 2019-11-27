@@ -13,7 +13,7 @@ sudo apt-get install pptpd
 
 配置网关和IP分配段
 sudo vim /etc/pptpd.conf
-option /etc/ppp/options #原为option /etc/ppp/pptpd-options 有问题无法读取配置文件
+option /etc/ppp/options #原为/etc/ppp/pptpd-options 但有问题无法读取配置文件
 localip 192.168.10.1	#是×××服务器的地址
 remoteip 192.168.10.1-200	#表示×××能分配给客户机的地址。
 
