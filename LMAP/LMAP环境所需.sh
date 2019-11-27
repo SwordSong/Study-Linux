@@ -1,0 +1,6 @@
+MYSQL
+Apache
+PHP
+apache结合php
+配置apache的进程管理以及虚拟主机
+Zend安装
