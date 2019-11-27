@@ -20,3 +20,5 @@ LoadModule php7_module /usr/lib/apache2/modules/libphp7.0.so
 $sudo apt-get install php7.0-mysql 
 
 然后重启mysql和apache2
+
+接着去apache的目录建一个phpinfo.php文件
