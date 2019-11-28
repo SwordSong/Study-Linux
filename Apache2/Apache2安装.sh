@@ -1,6 +1,21 @@
-Apache2安装
-apt-get install apache2
+1.Apache2安装
+apt-get install -y apache2
 
-修改php.ini 显示错误信息
+2.监听端口
+vim etc/apache2/ports.conf    #默认80
 
- vi /etc/php/7.2/apache2/php.ini #默认情况下是display_errors = Off，把Off修改为On，保存关闭文件,然后重启apache。
+3.修改默认网页地址
+vim /etc/apache2/sites-enabled/000-default.conf
+
+
+4.添加路径白名单
+vim /etc/apache2/apache2.conf 
+
+<Directory 新路径>
+	Options Indexes FollowSymLinks
+	AllowOverride None
+	Require all granted
+</Directory>
+
+4.重启服务
+systemctl restart apache2.service

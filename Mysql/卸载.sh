@@ -1,25 +1,9 @@
-删除mysql完整步骤：
-
-1、sudo apt-get remove mysql-server.
-
- 
-
-2、sudo apt-get autoremove mysql-server
-
-
-
-3、sudo apt-get remove mysql-common
-
-
-
-4、
-sudo rm /var/lib/mysql/ -R
-
-sudo rm /etc/mysql/ -R
-
-
-
-sudo apt-get autoremove mysql* --purge
-
-sudo apt-get remove apparmor
-
+#!/bin/bash
+sudo apt-get -y purge mysql-*
+sudo apt-get -y remove mysql-server
+sudo apt-get -y autoremove mysql-*
+sudo apt-get -y autoremove mysql* 
+sudo apt-get -y remove mysql-*
+sudo rm -rf /var/lib/mysql/ -R
+sudo rm -rf /etc/mysql/ -R
+sudo apt-get -y remove apparmor
