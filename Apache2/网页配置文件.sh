@@ -11,7 +11,7 @@ VirtualHost *:80> #监听端口
         #ServerName www.example.com
 
         ServerAdmin webmaster@localhost #参数后为管理员email
-        DocumentRoot /home/web   #网页路径
+        DocumentRoot DocumentRoot /var/www/html   #网页路径
 
         # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
         # error, crit, alert, emerg.
