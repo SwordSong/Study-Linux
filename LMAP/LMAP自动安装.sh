@@ -1,4 +1,5 @@
 #!/bin/bash
+#初级安装
 sudo echo "开始安装LMAP环境"
 sudo echo "正在安装Mysql"
 sudo apt-get install -y mysql-server 

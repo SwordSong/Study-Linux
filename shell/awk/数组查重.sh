@@ -1,1 +1,0 @@
- awk '{nums[$1]++} END{ for (i in nums) print i,nums[i] }' tlnum.txt 

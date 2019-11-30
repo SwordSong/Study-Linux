@@ -24,10 +24,10 @@ zcat create.sql.gz | mysql -u zabbix -p zabbixdb
 
 步骤5 –编辑Zabbix配置文件
 vim /etc/zabbix/zabbix_server.conf
-  DBHost=localhost
-  DBName=zabbixdb
-  DBUser=zabbix
-  DBPassword=password
+  DBHost=数据库地址
+  DBName=数据库名
+  DBUser=数据库用户名
+  DBPassword=数据库用户密码
 
 步骤6 –重新启动Apache和Zabbix
 cp /etc/zabbixapache.conf /etc/apache2/apache.cof
