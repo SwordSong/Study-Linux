@@ -10,6 +10,8 @@ select * from xxx					查看xxx中表内容
 select XXX,aaa from xxx 			显示xxx表中XXX、aaa内容
 flush privileges					刷新权限
 CREATE USER 'xxxxx'@'xxxxx' IDENTIFIED BY 'password'; 创建用户
+DROP USER 'xxxx'@'xxxx'
+mysql> show processlist; 			查看mysql数据库连接数、并发数相关信息的命令
 
 数据库的授权
  grant	权限列表	on	数据库名.表名	to	用户名@ 	客户机地址	identified	by	'密码';
