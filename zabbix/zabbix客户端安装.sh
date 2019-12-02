@@ -14,12 +14,11 @@ sudo vi /etc/zabbix/zabbix_agentd.conf
 #Server=[zabbix server ip]
 #Hostname=[Hostname of client system ]
 
-Server=192.168.1.10
+Server=服务器ip
 Hostname=Server2
 
 步骤4 重启zabbix代理
 sudo systemctl enable zabbix-agent 
 sudo systemctl start zabbix-agent 
 
-
-zabbix server is not runging :the information displayed may noe be current
+在服务端添加主机和模块
